@@ -1,0 +1,267 @@
+@charset "UTF-8";
+@import url("./reset_styles.css");
+/* ----- headerハンバーガーメニュー ----- */
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
+}
+
+.global-nav {
+  position: fixed;
+  right: -320px;
+  /* これで隠れる */
+  top: 0;
+  width: 300px;
+  /* スマホに収まるくらい */
+  height: 100vh;
+  padding-top: 40px;
+  background-color: #fff;
+  -webkit-transition: all .6s;
+  transition: all .6s;
+  z-index: 200;
+  overflow-y: auto;
+  /* メニューが多くなったらスクロールできるように */
+}
+
+.hamburger {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40px;
+  /* クリックしやすいようにちゃんと幅を指定する */
+  height: 40px;
+  /* クリックしやすいようにちゃんと高さを指定する */
+  cursor: pointer;
+  z-index: 300;
+}
+
+.global-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.global-nav__item {
+  text-align: center;
+  padding: 0 14px;
+}
+
+.global-nav__item a {
+  display: block;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  text-decoration: none;
+  color: #111;
+}
+
+.global-nav__item a:hover {
+  background-color: #eee;
+}
+
+.hamburger__line {
+  position: absolute;
+  left: 11px;
+  width: 18px;
+  height: 1px;
+  background-color: #595757;
+  -webkit-transition: all .6s;
+  transition: all .6s;
+}
+
+.hamburger__line--1 {
+  top: 14px;
+}
+
+.hamburger__line--2 {
+  top: 20px;
+}
+
+.hamburger__line--3 {
+  top: 26px;
+}
+
+.black-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background-color: #000;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .6s;
+  transition: all .6s;
+  cursor: pointer;
+}
+
+/* 表示された時用のCSS */
+.nav-open .global-nav {
+  right: 0;
+}
+
+.nav-open .black-bg {
+  opacity: .8;
+  visibility: visible;
+}
+
+.nav-open .hamburger__line--1 {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 20px;
+}
+
+.nav-open .hamburger__line--2 {
+  width: 0;
+  left: 50%;
+}
+
+.nav-open .hamburger__line--3 {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 20px;
+}
+
+/* ----- ハンバーガーメニュー文字 ----- */
+.global-nav__item {
+  line-height: 3em;
+}
+
+.global-nav__item a {
+  color: #595757;
+}
+
+/* ----- ヘッダーより下の設定 ----- */
+.main {
+  background: #ece4e1;
+}
+
+/* ----- スマホ用header調整 ----- */
+.header {
+  padding: 0 0 17px 0;
+  z-index: 100;
+}
+
+.header .header-inner {
+  margin: 15px;
+}
+
+.header .header-inner .hamburger {
+  margin-right: 8px;
+  margin-top: 8px;
+}
+
+/* ----- スマホ用slider調整 ----- */
+.slider-inner {
+  margin-top: 50px;
+}
+
+/* ----- slick-slider ----- */
+.slider {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 0;
+}
+
+.slider img {
+  height: auto;
+  width: 100%;
+}
+
+/*slick setting*/
+.slick-prev:before,
+.slick-next:before {
+  color: #000;
+}
+
+.prev,
+.next {
+  position: absolute;
+  padding: 20px;
+  width: 20px;
+  top: 40%;
+  z-index: 10;
+}
+
+.next {
+  right: 0;
+}
+
+/* ----- top-title ----- */
+.top-title {
+  margin: 80px 0;
+  text-align: center;
+}
+
+/* ----- sp_top-button ----- */
+.sp__top-button .inside__image {
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sp__top-button .inside__image:last-child {
+  background: #ece4e1;
+  padding-bottom: 20px;
+  margin-bottom: 0;
+}
+
+.sp__top-button h2 {
+  position: absolute;
+  color: #fff;
+  font-size: 5vw;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.sp__top-button h2::after {
+  content: '';
+  background: url("../images/sp_top-button-mark.png");
+  width: 52px;
+  height: 53px;
+  top: 40px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  position: absolute;
+}
+
+/* ----- footer ----- */
+.footer .footer-inner h2 {
+  padding: 30px 0 30px 50%;
+  background: #5b7c13;
+  color: #fff;
+  font-weight: normal;
+  font-size: 4vw;
+}
+
+.footer .footer-inner h3 {
+  margin-bottom: 10px;
+}
+
+.footer .footer-inner .contact {
+  padding: 50px 10%;
+  background: #394918;
+  color: #fff;
+  font-weight: normal;
+  font-size: 3vw;
+}
+
+.footer .footer-inner .contact li {
+  list-style: none;
+  line-height: 1.5em;
+  text-indent: 1em;
+}
+
+/* -----  ----- */
+/* -----  ----- */
+/*# sourceMappingURL=style.css.map */
