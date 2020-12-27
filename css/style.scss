@@ -45,7 +45,7 @@ $spBreakPoint: 768px; //スマホ、ブレイクポイント
     height: 40px;
     /* クリックしやすいようにちゃんと高さを指定する */
     cursor: pointer;
-    z-index: 300;
+    z-index: 100;
 }
 
 .global-nav__list {
@@ -131,14 +131,50 @@ $spBreakPoint: 768px; //スマホ、ブレイクポイント
     top: 20px;
 }
 
-/* ハンバーガーメニューの文字 */
-.global-nav__item {
-    line-height: 3em;
+/* ハンバーガーメニュー修正 */
+.hamburger {
+    margin-top: -5px;
+}
 
-    a {
+/* ナビメニュー */
+.global-nav {
+    /* ナビメニュー「閉じる」部分 */
+    .nav-close {
+        position: relative;
+        line-height: 3em;
+        padding: 8px 0;
+        margin: 0 14px;
+        border-bottom: 1px solid #eee;
         color: #595757;
+        text-indent: 1em;
+        cursor: pointer;
+
+        .close-nav {
+            position: absolute;
+            background: #bbbbbb;
+            width: 65px;
+            height: 65px;
+            line-height: 65px;
+            left: -1px;
+            bottom: -1px;
+            text-indent: 0;
+        }
+
+        &:hover {
+            background-color: #eee;
+        }
+    }
+
+    /* ナビメニューの文字修正 */
+    .global-nav__item {
+        line-height: 3em;
+
+        a {
+            color: #595757;
+        }
     }
 }
+
 
 /* ----- main部分の設定 ----- */
 .main {
@@ -151,7 +187,7 @@ $spBreakPoint: 768px; //スマホ、ブレイクポイント
     z-index: 100;
 
     .header-inner {
-        // position: relative;
+        position: relative;
         margin: 15px;
 
         @include mq_pc(){
@@ -161,8 +197,8 @@ $spBreakPoint: 768px; //スマホ、ブレイクポイント
         }
 
         .hamburger {
-            margin-right: 8px;
-            margin-top: 8px;
+            // margin-right: 8px;
+            // margin-top: 8px;
         }
     }
 }

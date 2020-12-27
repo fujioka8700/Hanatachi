@@ -15,6 +15,18 @@ function toggleNav() {
 }
 toggleNav();
 
+//「メニューを閉じる」押すと、ナビメニュー閉じる
+function navClose() {
+    let body = document.body;
+    let navClose = document.getElementById('nav-close');
+
+    navClose.addEventListener('click', function(){
+        console.log('おされた');
+        body.classList.remove('nav-open');
+    });
+}
+navClose();
+
 //TOP画面、slick-slider設定
 $('.slider').slick({
     autoplay:true,
