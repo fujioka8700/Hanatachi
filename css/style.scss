@@ -122,7 +122,7 @@
     top: 20px;
 }
 
-/* ----- ハンバーガーメニュー文字 ----- */
+/* ハンバーガーメニューの文字 */
 .global-nav__item {
     line-height: 3em;
 
@@ -131,12 +131,12 @@
     }
 }
 
-/* ----- ヘッダーより下の設定 ----- */
+/* ----- main部分の設定 ----- */
 .main {
     background: #ece4e1;
 }
 
-/* ----- スマホ用header調整 ----- */
+/* ----- header調整 ----- */
 .header {
     padding: 0 0 17px 0;
     z-index: 100;
@@ -151,7 +151,7 @@
     }
 }
 
-/* ----- スマホ用slider調整 ----- */
+/* ----- slider調整 ----- */
 .slider-inner {
     margin-top: 50px;
 }
@@ -169,7 +169,7 @@
     width: 100%;
 }
 
-/*slick setting*/
+/* slick setting */
 .slick-prev:before,
 .slick-next:before {
     color: #000;
@@ -188,13 +188,13 @@
     right: 0;
 }
 
-/* ----- top-title ----- */
+/* ----- TOP画面のホームページタイトル ----- */
 .top-title {
     margin: 80px 0;
     text-align: center;
 }
 
-/* ----- sp_top-button ----- */
+/* ----- TOP画面のリンクへのボタン ----- */
 .sp__top-button {
     .inside__image {
         position: relative;
@@ -238,6 +238,11 @@
             color: #fff;
             font-weight: normal;
             font-size: 4vw;
+
+            &::before {
+                content: '　';
+                background: url('../images/footer__list-style-mark.png') no-repeat center;
+            }
         }
         h3 {
             margin-bottom: 10px;
@@ -255,6 +260,11 @@
                 line-height: 1.5em;
                 text-indent: 1em;
             }
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
         }
     }
 }
