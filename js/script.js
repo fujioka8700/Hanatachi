@@ -23,6 +23,14 @@ $('.slider').slick({
     slidesToShow:1,
     slidesToScroll:1,
     arrows: true,
+    centerMode: true, //前後が見えるスライダー
+    centerPadding: '15%', //前後が見えるスライダー
     prevArrow:'<div class="prev"><img src="images/sp_top-slider-prevbutton.png"></div>',
     nextArrow:'<div class="next"><img src="images/sp_top-slider-nextbutton.png"></div>',
+    responsive: [{
+        breakpoint: 768,
+             settings: {
+                  centerMode: false,
+        }
+   }]
 });

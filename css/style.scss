@@ -1,4 +1,13 @@
 @import url('./reset_styles.css');
+$pcMaxWidth: 960px; //PC表示の最大幅
+$spBreakPoint: 768px; //スマホ、ブレイクポイント
+
+//PC表示メディアクエリ
+@mixin mq_pc($width: $spBreakPoint) {
+    @media only screen and (min-width: $width) {
+        @content;
+    }
+}
 
 /* ----- headerハンバーガーメニュー ----- */
 .header {
@@ -142,7 +151,14 @@
     z-index: 100;
 
     .header-inner {
+        // position: relative;
         margin: 15px;
+
+        @include mq_pc(){
+            max-width: 960px;
+            text-align: left;
+            margin: 13px auto;
+        }
 
         .hamburger {
             margin-right: 8px;
@@ -153,15 +169,37 @@
 
 /* ----- slider調整 ----- */
 .slider-inner {
+    position: relative;
     margin-top: 50px;
 }
 
 /* ----- slick-slider ----- */
+//slider画像、高さ固定
+// .slick-slide img {
+//     height: 30vw;
+//     max-height: 400px;
+//     min-height: 350px;
+//     max-width: 70%;
+//     height: 5vw;
+// }
+
 .slider {
     position: relative;
     margin: 0 auto;
     width: 100%;
     padding-left: 0;
+
+    //slideerにスマホ用、画像表示
+    .sp { display: block !important; }
+    .pc { display: none !important; }
+
+    @include mq_pc() {
+        //sliderにPC用、画像表示
+        .sp { display: none !important; }
+        .pc { display: block !important; }
+
+        max-width: 960px;
+    }
 }
 
 .slider img {
