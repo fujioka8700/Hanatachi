@@ -15,7 +15,7 @@ function toggleNav() {
 }
 toggleNav();
 
-//slick-slider設定
+//TOP画面、slick-slider設定
 $('.slider').slick({
     autoplay:true,
     autoplaySpeed:5000,
@@ -25,6 +25,4 @@ $('.slider').slick({
     arrows: true,
     prevArrow:'<div class="prev"><img src="images/sp_top-slider-prevbutton.png"></div>',
     nextArrow:'<div class="next"><img src="images/sp_top-slider-nextbutton.png"></div>',
-  });
-
-  console.log($('.slider'));
+});
