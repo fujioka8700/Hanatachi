@@ -21,7 +21,6 @@ function navClose() {
     let navClose = document.getElementById('nav-close');
 
     navClose.addEventListener('click', function(){
-        console.log('おされた');
         body.classList.remove('nav-open');
     });
 }
