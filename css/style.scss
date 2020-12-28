@@ -10,7 +10,7 @@ $spBreakPoint: 768px; //スマホ、ブレイクポイント
 }
 
 //ハイライトカラーの無効化
-* { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+* { -webkit-tap-highlight-color: rgba(0, 0, 0, 0)}
 
 /* ----- headerハンバーガーメニュー ----- */
 .header {
@@ -182,6 +182,7 @@ $spBreakPoint: 768px; //スマホ、ブレイクポイント
 /* ----- main部分の設定 ----- */
 .main {
     background: #ece4e1;
+    padding: 0 0 70px 0;
 }
 
 /* ----- header調整 ----- */
@@ -275,6 +276,14 @@ $spBreakPoint: 768px; //スマホ、ブレイクポイント
         text-align: center;
         margin-bottom: 20px;
 
+        @include mq_pc() {
+            width: 33.3333%;
+
+            img {
+                width: 95%;
+            }
+        }
+
         &:last-child {
             background: #ece4e1;
             padding-bottom: 20px;
@@ -285,8 +294,8 @@ $spBreakPoint: 768px; //スマホ、ブレイクポイント
     h2 {
         position: absolute;
         color: #fff;
-        font-size: 5vw;
-        top: 40%;
+        font-size: 1.2em;
+        top: 35%;
         left: 50%;
         transform: translate(-50%, 0);
 
@@ -295,11 +304,21 @@ $spBreakPoint: 768px; //スマホ、ブレイクポイント
             background: url('../images/sp_top-button-mark.png');
             width: 52px;
             height: 53px;
-            top: 40px;
+            top: 45px;
             left: 50%;
             transform: translate(-50%, 0);
             position: absolute;
         }
+    }
+
+    @include mq_pc() {
+        width: $pcMaxWidth;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        list-style: none;
+        margin: 0 auto;
     }
 }
 
@@ -307,11 +326,11 @@ $spBreakPoint: 768px; //スマホ、ブレイクポイント
 .footer {
     .footer-inner {
         h2 {
-            padding: 30px 0 30px 50%;
+            padding: 30px 0 30px 40%;
             background: #5b7c13;
             color: #fff;
             font-weight: normal;
-            font-size: 4vw;
+            font-size: 1.2em;
 
             &::before {
                 content: '　';
@@ -343,6 +362,3 @@ $spBreakPoint: 768px; //スマホ、ブレイクポイント
         }
     }
 }
-
-/* -----  ----- */
-/* -----  ----- */
