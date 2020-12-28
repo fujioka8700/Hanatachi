@@ -209,6 +209,10 @@
 }
 
 /* ----- slick-slider ----- */
+.slick-arrow {
+  cursor: pointer;
+}
+
 .slider {
   position: relative;
   margin: 0 auto;
@@ -282,6 +286,15 @@
   }
 }
 
+.sp__top-button .inside__image a {
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.sp__top-button .inside__image a:hover {
+  opacity: .7;
+}
+
 .sp__top-button .inside__image:last-child {
   background: #ece4e1;
   padding-bottom: 20px;
@@ -332,11 +345,12 @@
 
 /* ----- footer ----- */
 .footer .footer-inner h2 {
-  padding: 30px 0 30px 40%;
+  padding: 30px 20px;
   background: #5b7c13;
   color: #fff;
   font-weight: normal;
   font-size: 1.2em;
+  text-align: right;
 }
 
 .footer .footer-inner h2::before {
@@ -345,6 +359,7 @@
 }
 
 .footer .footer-inner h3 {
+  font-weight: normal;
   margin-bottom: 10px;
 }
 
@@ -353,7 +368,7 @@
   background: #394918;
   color: #fff;
   font-weight: normal;
-  font-size: 3vw;
+  font-size: .9em;
 }
 
 .footer .footer-inner .contact li {
@@ -365,5 +380,11 @@
 .footer .footer-inner a {
   color: #fff;
   text-decoration: none;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+}
+
+.footer .footer-inner a:hover {
+  opacity: .6;
 }
 /*# sourceMappingURL=style.css.map */

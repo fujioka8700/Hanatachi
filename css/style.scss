@@ -209,6 +209,10 @@ $spBreakPoint: 768px; //スマホ、ブレイクポイント
 }
 
 /* ----- slick-slider ----- */
+.slick-arrow {
+    cursor: pointer;
+}
+
 .slider {
     position: relative;
     margin: 0 auto;
@@ -284,6 +288,15 @@ $spBreakPoint: 768px; //スマホ、ブレイクポイント
             }
         }
 
+        //ボタンの上にポインタ、明るくする
+        a {
+            transition: opacity .3s;
+
+            &:hover {
+                opacity: .7;
+            }
+        }
+
         &:last-child {
             background: #ece4e1;
             padding-bottom: 20px;
@@ -326,19 +339,22 @@ $spBreakPoint: 768px; //スマホ、ブレイクポイント
 .footer {
     .footer-inner {
         h2 {
-            padding: 30px 0 30px 40%;
+            padding: 30px 20px;
             background: #5b7c13;
             color: #fff;
             font-weight: normal;
             font-size: 1.2em;
+            text-align: right;
 
             &::before {
                 content: '　';
                 background: url('../images/footer__list-style-mark.png') no-repeat center;
             }
+
         }
 
         h3 {
+            font-weight: normal;
             margin-bottom: 10px;
         }
 
@@ -347,7 +363,7 @@ $spBreakPoint: 768px; //スマホ、ブレイクポイント
             background: #394918;
             color: #fff;
             font-weight: normal;
-            font-size: 3vw;
+            font-size: .9em;
 
             li {
                 list-style: none;
@@ -359,6 +375,11 @@ $spBreakPoint: 768px; //スマホ、ブレイクポイント
         a {
             color: #fff;
             text-decoration: none;
+            transition: opacity .2s;
+
+            &:hover {
+                opacity: .6;
+            }
         }
     }
 }
