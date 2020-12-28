@@ -9,8 +9,20 @@ $spBreakPoint: 768px; //スマホ、ブレイクポイント
     }
 }
 
+//リンクの文字色
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: opacity .2s;
+
+    //リンクhover時、暗くする
+    &:hover {
+        opacity: .6;
+    }
+}
+
 //ハイライトカラーの無効化
-* { -webkit-tap-highlight-color: rgba(0, 0, 0, 0)}
+* { -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important; }
 
 /* ----- headerハンバーガーメニュー ----- */
 .header {
@@ -72,6 +84,7 @@ $spBreakPoint: 768px; //スマホ、ブレイクポイント
 
 .global-nav__item a:hover {
     background-color: #eee;
+    opacity: 1;
 }
 
 .hamburger__line {
@@ -195,9 +208,14 @@ $spBreakPoint: 768px; //スマホ、ブレイクポイント
         margin: 15px;
 
         @include mq_pc() {
-            max-width: 960px;
+            max-width: $pcMaxWidth;
             text-align: left;
             margin: 13px auto;
+        }
+
+        //ホームページhover時、変化はつけない
+        a:hover {
+            opacity: 1;
         }
     }
 }
@@ -239,7 +257,7 @@ $spBreakPoint: 768px; //スマホ、ブレイクポイント
             display: block !important;
         }
 
-        max-width: 960px;
+        max-width: $pcMaxWidth;
     }
 }
 
@@ -338,6 +356,10 @@ $spBreakPoint: 768px; //スマホ、ブレイクポイント
 /* ----- footer ----- */
 .footer {
     .footer-inner {
+        .info-bgcolor {
+            background: #5b7c13;
+        }
+
         h2 {
             padding: 30px 20px;
             background: #5b7c13;
@@ -351,6 +373,10 @@ $spBreakPoint: 768px; //スマホ、ブレイクポイント
                 background: url('../images/footer__list-style-mark.png') no-repeat center;
             }
 
+            @include mq_pc() {
+                max-width: $pcMaxWidth;
+                margin: 0 auto;
+            }
         }
 
         h3 {
@@ -358,8 +384,15 @@ $spBreakPoint: 768px; //スマホ、ブレイクポイント
             margin-bottom: 10px;
         }
 
+        .contact-bgcolor {
+            background: #394918;
+        }
+
         .contact {
-            padding: 50px 10%;
+            max-width: $pcMaxWidth;
+            margin: 0 auto;
+            padding: 50px 5% 0 5%;
+            box-sizing: border-box;
             background: #394918;
             color: #fff;
             font-weight: normal;
@@ -370,15 +403,10 @@ $spBreakPoint: 768px; //スマホ、ブレイクポイント
                 line-height: 1.5em;
                 text-indent: 1em;
             }
-        }
 
-        a {
-            color: #fff;
-            text-decoration: none;
-            transition: opacity .2s;
-
-            &:hover {
-                opacity: .6;
+            .small {
+                text-align: center;
+                padding: 20px;
             }
         }
     }
