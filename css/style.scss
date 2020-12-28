@@ -1,4 +1,5 @@
 @import url('./reset_styles.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap');
 $pcMaxWidth: 960px; //PC表示の最大幅
 $spBreakPoint: 768px; //スマホ、ブレイクポイント
 
@@ -365,7 +366,7 @@ a {
             background: #5b7c13;
             color: #fff;
             font-weight: normal;
-            font-size: 1.2em;
+            font-size: .8em;
             text-align: right;
 
             &::before {
@@ -396,7 +397,7 @@ a {
             background: #394918;
             color: #fff;
             font-weight: normal;
-            font-size: .9em;
+            font-size: .8em;
 
             li {
                 list-style: none;
@@ -407,7 +408,46 @@ a {
             .small {
                 text-align: center;
                 padding: 20px;
+                font-size: .6em;
             }
         }
+    }
+}
+
+/* 「道端の花たちとは」ページ */
+.about {
+    .main {
+        background-color: #fff;
+        background: url('../images/about-bg.jpg');
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .introduction {
+        color: #595757;
+        h3 {
+            font-family: 'Noto Serif JP', serif, "Yu Mincho", "游明朝", "YuMincho", "游明朝体";
+            font-size: 1.6em;
+            line-height: 1.4em;
+            padding: 40px 15px;
+        }
+        p {
+            font-size: .9em;
+            line-height: 1.2em;
+            padding: .5em 15px;
+        }
+    }
+}
+
+.subTitle {
+    background: #8fc31f;
+    margin: 57px 0 0 0 ;
+    padding: 13px 15px;
+
+    h2 {
+        font-size: .8em;
+        font-weight: normal;
+        color: #fff;
     }
 }

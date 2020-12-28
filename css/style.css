@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("./reset_styles.css");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap");
 a {
   color: #fff;
   text-decoration: none;
@@ -369,7 +370,7 @@ a:hover {
   background: #5b7c13;
   color: #fff;
   font-weight: normal;
-  font-size: 1.2em;
+  font-size: .8em;
   text-align: right;
 }
 
@@ -403,7 +404,7 @@ a:hover {
   background: #394918;
   color: #fff;
   font-weight: normal;
-  font-size: .9em;
+  font-size: .8em;
 }
 
 .footer .footer-inner .contact li {
@@ -415,5 +416,44 @@ a:hover {
 .footer .footer-inner .contact .small {
   text-align: center;
   padding: 20px;
+  font-size: .6em;
+}
+
+/* 「道端の花たちとは」ページ */
+.about .main {
+  background-color: #fff;
+  background: url("../images/about-bg.jpg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.about .introduction {
+  color: #595757;
+}
+
+.about .introduction h3 {
+  font-family: 'Noto Serif JP', serif, "Yu Mincho", "游明朝", "YuMincho", "游明朝体";
+  font-size: 1.6em;
+  line-height: 1.4em;
+  padding: 40px 15px;
+}
+
+.about .introduction p {
+  font-size: .9em;
+  line-height: 1.2em;
+  padding: .5em 15px;
+}
+
+.subTitle {
+  background: #8fc31f;
+  margin: 57px 0 0 0;
+  padding: 13px 15px;
+}
+
+.subTitle h2 {
+  font-size: .8em;
+  font-weight: normal;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
