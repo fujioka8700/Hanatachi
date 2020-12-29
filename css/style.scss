@@ -375,6 +375,7 @@ a {
 
         h2 {
             padding: 30px 20px;
+            box-sizing: border-box;
             background: $neutralColor;
             color: $importantColor;
             font-weight: normal;
@@ -470,5 +471,10 @@ a {
         font-size: .8em;
         font-weight: normal;
         color: $importantColor;
+
+        @include mq_pc() {
+            padding: 0 15px;
+            box-sizing: border-box;
+        }
     }
 }

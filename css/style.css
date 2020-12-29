@@ -373,6 +373,8 @@ a:hover {
 
 .footer .footer-inner h2 {
   padding: 30px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background: #5b7c13;
   color: #fff;
   font-weight: normal;
@@ -469,5 +471,13 @@ a:hover {
   font-size: .8em;
   font-weight: normal;
   color: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+  .subTitle h2 {
+    padding: 0 15px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
 }
 /*# sourceMappingURL=style.css.map */
