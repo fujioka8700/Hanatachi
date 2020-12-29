@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap');
 $pcMaxWidth: 960px; //PC表示の最大幅
 $spBreakPoint: 768px; //スマホ、ブレイクポイント
+$textColor: #595757; //基本の文字色
+$importantColor: #fff; //重要な文字色
+$lightColor: #8fc31f; //明るい背景色
+$neutralColor: #5b7c13; //中間の背景色
+$darkColor: #394918; //濃い背景色
 
 //PC表示メディアクエリ
 @mixin mq_pc($width: $spBreakPoint) {
@@ -10,9 +15,16 @@ $spBreakPoint: 768px; //スマホ、ブレイクポイント
     }
 }
 
+//PC表示の場合、改行させない文章
+.br-pc {
+    @include mq_pc() {
+        display: none;
+    }
+}
+
 //リンクの文字色
 a {
-    color: #fff;
+    color: $importantColor;
     text-decoration: none;
     transition: opacity .2s;
 
@@ -163,7 +175,7 @@ a {
         padding: 8px 0;
         margin: 0 14px;
         border-bottom: 1px solid #eee;
-        color: #595757;
+        color: $textColor;
         text-indent: 1em;
         cursor: pointer;
 
@@ -188,7 +200,7 @@ a {
         line-height: 3em;
 
         a {
-            color: #595757;
+            color: $textColor;
         }
     }
 }
@@ -325,7 +337,7 @@ a {
 
     h2 {
         position: absolute;
-        color: #fff;
+        color: $importantColor;
         font-size: 1.2em;
         top: 35%;
         left: 50%;
@@ -358,13 +370,13 @@ a {
 .footer {
     .footer-inner {
         .info-bgcolor {
-            background: #5b7c13;
+            background: $neutralColor;
         }
 
         h2 {
             padding: 30px 20px;
-            background: #5b7c13;
-            color: #fff;
+            background: $neutralColor;
+            color: $importantColor;
             font-weight: normal;
             font-size: .8em;
             text-align: right;
@@ -386,7 +398,7 @@ a {
         }
 
         .contact-bgcolor {
-            background: #394918;
+            background: $darkColor;
         }
 
         .contact {
@@ -394,8 +406,8 @@ a {
             margin: 0 auto;
             padding: 50px 5% 0 5%;
             box-sizing: border-box;
-            background: #394918;
-            color: #fff;
+            background: $darkColor;
+            color: $importantColor;
             font-weight: normal;
             font-size: .8em;
 
@@ -418,14 +430,21 @@ a {
 .about {
     .main {
         background-color: #fff;
+        padding: 0;
+    }
+
+    .introduction {
+        background-color: #fff;
         background: url('../images/about-bg.jpg');
         background-position: top;
         background-size: cover;
         background-repeat: no-repeat;
-    }
+        max-width: $pcMaxWidth;
+        margin: 0 auto;
+        padding: 0 0 70px 0;
+        min-height: 600px;
+        color: $textColor;
 
-    .introduction {
-        color: #595757;
         h3 {
             font-family: 'Noto Serif JP', serif, "Yu Mincho", "游明朝", "YuMincho", "游明朝体";
             font-size: 1.6em;
@@ -441,13 +460,15 @@ a {
 }
 
 .subTitle {
-    background: #8fc31f;
+    background: $lightColor;
     margin: 57px 0 0 0 ;
     padding: 13px 15px;
 
     h2 {
+        max-width: $pcMaxWidth;
+        margin: 0 auto;
         font-size: .8em;
         font-weight: normal;
-        color: #fff;
+        color: $importantColor;
     }
 }
