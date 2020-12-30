@@ -497,6 +497,13 @@ a {
         align-items: center;
         list-style: none;
 
+        @include mq_pc() {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0 0 0;
+        }
+
         .enjoy-list__item {
             // background: aquamarine;//仮の背景色
             width: 320px;
