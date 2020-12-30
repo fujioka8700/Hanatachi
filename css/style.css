@@ -555,6 +555,10 @@ a:hover {
 }
 
 /* 「ウォーキングのすすめ」ページ */
+.setting3 .main {
+  background: #ece4e1;
+}
+
 .setting3 .subTitle {
   background: #ece4e1;
   margin: 57px 0 0 0;
@@ -562,6 +566,7 @@ a:hover {
 }
 
 .setting3 .subTitle h2 {
+  max-width: 400px;
   font-family: "Noto Serif JP", serif, "Yu Mincho", "游明朝", "YuMincho", "游明朝体";
   color: #595757;
   text-align: center;
@@ -573,6 +578,12 @@ a:hover {
 
 .setting3 .introduction {
   background: #ece4e1;
+}
+
+@media only screen and (min-width: 768px) {
+  .setting3 .introduction {
+    max-width: 1100px;
+  }
 }
 
 .setting3 .introduction .desc {
@@ -598,6 +609,20 @@ a:hover {
       -ms-flex-align: center;
           align-items: center;
   list-style: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .setting3 .introduction .recommend-list {
+    max-width: 1100px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 
 .setting3 .introduction .recommend-list .recommend-list__item .wrapper {
