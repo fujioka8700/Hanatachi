@@ -428,12 +428,12 @@ a:hover {
 }
 
 /* 「道端の花たちとは」ページ */
-.about .main {
+.setting1 .main {
   background-color: #fff;
   padding: 0;
 }
 
-.about .introduction {
+.setting1 .introduction {
   background-color: #fff;
   background: url("../images/about-bg.jpg");
   background-position: top;
@@ -446,16 +446,16 @@ a:hover {
   color: #595757;
 }
 
-.about .introduction h3 {
+.setting1 .introduction h3 {
   font-family: 'Noto Serif JP', serif, "Yu Mincho", "游明朝", "YuMincho", "游明朝体";
   font-size: 1.6em;
   line-height: 1.4em;
   padding: 40px 15px;
 }
 
-.about .introduction p {
+.setting1 .introduction p {
   font-size: .9em;
-  line-height: 1.2em;
+  line-height: 1.4em;
   padding: .5em 15px;
 }
 
@@ -479,5 +479,63 @@ a:hover {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
+}
+
+/* 「花を楽しむ」ページ */
+.setting2 {
+  background: #000;
+}
+
+.setting2 .introduction {
+  background: #fff;
+}
+
+.setting2 .introduction h3 {
+  padding-bottom: 20px;
+}
+
+.setting2 .enjoy-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+.setting2 .enjoy-list .enjoy-list__item {
+  width: 320px;
+  max-height: 320px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.setting2 .enjoy-list .enjoy-list__item:nth-of-type(odd) {
+  padding: 20px;
+}
+
+.setting2 .enjoy-list .enjoy-list__item h4 {
+  font-family: 'Noto Serif JP', serif, "Yu Mincho", "游明朝", "YuMincho", "游明朝体";
+  font-size: 1.2em;
+  line-height: 1.5em;
+  color: #a0122c;
+}
+
+.setting2 .enjoy-list .enjoy-list__item h4 .enjoy-point {
+  font-size: .8em;
+}
+
+.setting2 .enjoy-list .enjoy-list__item p {
+  padding: 30px 0;
+}
+
+.setting2 .enjoy-list .enjoy-list__item img {
+  width: 320px;
+  height: 320px;
 }
 /*# sourceMappingURL=style.css.map */

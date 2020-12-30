@@ -428,7 +428,7 @@ a {
 }
 
 /* 「道端の花たちとは」ページ */
-.about {
+.setting1 {
     .main {
         background-color: #fff;
         padding: 0;
@@ -454,7 +454,7 @@ a {
         }
         p {
             font-size: .9em;
-            line-height: 1.2em;
+            line-height: 1.4em;
             padding: .5em 15px;
         }
     }
@@ -475,6 +475,59 @@ a {
         @include mq_pc() {
             padding: 0 15px;
             box-sizing: border-box;
+        }
+    }
+}
+
+/* 「花を楽しむ」ページ */
+.setting2 {
+    background: #000;
+    
+    .introduction {
+        background: #fff;
+
+        h3 {
+            padding-bottom: 20px;
+        }
+    }
+
+    .enjoy-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style: none;
+
+        .enjoy-list__item {
+            // background: aquamarine;//仮の背景色
+            width: 320px;
+            max-height: 320px;//本当の高さ
+            // height: 320px;//仮の高さ
+            box-sizing: border-box;
+
+            //子要素、偶数のみ余白有り
+            &:nth-of-type(odd) {
+                padding: 20px;
+            }
+
+            h4 {
+                font-family: 'Noto Serif JP', serif, "Yu Mincho", "游明朝", "YuMincho", "游明朝体";
+                font-size: 1.2em;
+                line-height: 1.5em;
+                color: #a0122c;
+
+                .enjoy-point {
+                    font-size: .8em;
+                }
+            }
+
+            p {
+                padding: 30px 0;
+            }
+
+            img {
+                width: 320px;
+                height: 320px;
+            }
         }
     }
 }
