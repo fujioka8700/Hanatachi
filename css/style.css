@@ -447,7 +447,7 @@ a:hover {
 }
 
 .setting1 .introduction h3 {
-  font-family: 'Noto Serif JP', serif, "Yu Mincho", "游明朝", "YuMincho", "游明朝体";
+  font-family: "Noto Serif JP", serif, "Yu Mincho", "游明朝", "YuMincho", "游明朝体";
   font-size: 1.6em;
   line-height: 1.4em;
   padding: 40px 15px;
@@ -535,7 +535,7 @@ a:hover {
 }
 
 .setting2 .enjoy-list .enjoy-list__item h4 {
-  font-family: 'Noto Serif JP', serif, "Yu Mincho", "游明朝", "YuMincho", "游明朝体";
+  font-family: "Noto Serif JP", serif, "Yu Mincho", "游明朝", "YuMincho", "游明朝体";
   font-size: 1.2em;
   line-height: 1.5em;
   color: #a0122c;
@@ -552,5 +552,72 @@ a:hover {
 .setting2 .enjoy-list .enjoy-list__item img {
   width: 320px;
   height: 320px;
+}
+
+/* 「ウォーキングのすすめ」ページ */
+.setting3 .subTitle {
+  background: #ece4e1;
+  margin: 57px 0 0 0;
+  padding: 50px 40px;
+}
+
+.setting3 .subTitle h2 {
+  font-family: "Noto Serif JP", serif, "Yu Mincho", "游明朝", "YuMincho", "游明朝体";
+  color: #595757;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-left: 2px #bcb6b3 solid;
+  border-right: 2px #bcb6b3 solid;
+}
+
+.setting3 .introduction {
+  background: #ece4e1;
+}
+
+.setting3 .introduction .desc {
+  text-align: center;
+}
+
+.setting3 .introduction h3 {
+  padding: 30px;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.setting3 .introduction .recommend-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+.setting3 .introduction .recommend-list .recommend-list__item .wrapper {
+  background: #fff;
+  margin: 0 0 15px 0;
+  width: 340px;
+  height: 480px;
+}
+
+.setting3 .introduction .recommend-list .recommend-list__item .wrapper .center-area {
+  position: relative;
+  height: 240px;
+}
+
+.setting3 .introduction .recommend-list .recommend-list__item .wrapper .center-area .info {
+  position: absolute;
+  width: 300px;
+  -webkit-transform: translate(-40%, -50%);
+          transform: translate(-40%, -50%);
+  left: 50%;
+  top: 50%;
 }
 /*# sourceMappingURL=style.css.map */

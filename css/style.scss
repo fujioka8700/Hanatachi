@@ -1,5 +1,7 @@
 @import url('./reset_styles.css');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap');
+//フォントは明朝体
+$fontMincho: 'Noto Serif JP', serif, "Yu Mincho", "游明朝", "YuMincho", "游明朝体";
 $pcMaxWidth: 960px; //PC表示の最大幅
 $spBreakPoint: 768px; //スマホ、ブレイクポイント
 $textColor: #595757; //基本の文字色
@@ -7,6 +9,7 @@ $importantColor: #fff; //重要な文字色
 $lightColor: #8fc31f; //明るい背景色
 $neutralColor: #5b7c13; //中間の背景色
 $darkColor: #394918; //濃い背景色
+$beigeColor: #ece4e1; //ベージュ色
 
 //PC表示メディアクエリ
 @mixin mq_pc($width: $spBreakPoint) {
@@ -447,7 +450,7 @@ a {
         color: $textColor;
 
         h3 {
-            font-family: 'Noto Serif JP', serif, "Yu Mincho", "游明朝", "YuMincho", "游明朝体";
+            font-family: $fontMincho;
             font-size: 1.6em;
             line-height: 1.4em;
             padding: 40px 15px;
@@ -505,10 +508,8 @@ a {
         }
 
         .enjoy-list__item {
-            // background: aquamarine;//仮の背景色
             width: 320px;
             max-height: 320px;//本当の高さ
-            // height: 320px;//仮の高さ
             box-sizing: border-box;
 
             //子要素、偶数のみ余白有り
@@ -517,7 +518,7 @@ a {
             }
 
             h4 {
-                font-family: 'Noto Serif JP', serif, "Yu Mincho", "游明朝", "YuMincho", "游明朝体";
+                font-family: $fontMincho;
                 font-size: 1.2em;
                 line-height: 1.5em;
                 color: #a0122c;
@@ -534,6 +535,69 @@ a {
             img {
                 width: 320px;
                 height: 320px;
+            }
+        }
+    }
+}
+
+/* 「ウォーキングのすすめ」ページ */
+.setting3 {
+    .subTitle {
+        background: $beigeColor;
+        margin: 57px 0 0 0;
+        padding: 50px 40px;
+
+        h2 {
+            font-family: $fontMincho;
+            color: $textColor;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-left: 2px #bcb6b3 solid;
+            border-right: 2px #bcb6b3 solid;
+        }
+    }
+
+    .introduction {
+        background: $beigeColor;
+
+        .desc {
+            text-align: center;
+        }
+
+        h3 {
+            padding: 30px;
+            font-size: 1.1em;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .recommend-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            list-style: none;
+
+            .recommend-list__item {
+                .wrapper {
+                    background: #fff;
+                    margin: 0 0 15px 0;
+                    width: 340px;
+                    height: 480px;
+
+                .center-area {
+                    position: relative;
+                    height: 240px;
+
+                    .info {
+                        position: absolute;
+                        width: 300px;
+                        transform: translate(-40%, -50%);
+                        left: 50%;
+                        top: 50%;
+                        }
+                    }
+                }
             }
         }
     }
