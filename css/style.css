@@ -424,7 +424,7 @@ a:hover {
 .footer .footer-inner .contact .small {
   text-align: center;
   padding: 20px;
-  font-size: .6em;
+  font-size: .8em;
 }
 
 /* 「道端の花たちとは」ページ */
@@ -644,5 +644,40 @@ a:hover {
           transform: translate(-40%, -50%);
   left: 50%;
   top: 50%;
+}
+
+/* 更新情報・お知らせ */
+.setting4 .introduction {
+  background: #ece4e1;
+  min-height: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .setting4 .introduction {
+    min-height: 600px;
+  }
+}
+
+.setting4 .introduction h3 {
+  margin: 0 15px;
+  padding: 30px 0 20px 0;
+  border-bottom: 1px #868585 solid;
+  font-family: "Noto Serif JP", serif, "Yu Mincho", "游明朝", "YuMincho", "游明朝体";
+  color: #a0122c;
+}
+
+.setting4 .introduction .info-list .info-list__item {
+  position: relative;
+  margin: 30px;
+  list-style: none;
+}
+
+.setting4 .introduction .info-list .info-list__item time::before {
+  content: "●";
+  position: absolute;
+  top: .5em;
+  margin: 0 0 0 -12px;
+  font-size: .5em;
+  color: #a0122c;
 }
 /*# sourceMappingURL=style.css.map */

@@ -424,7 +424,7 @@ a {
             .small {
                 text-align: center;
                 padding: 20px;
-                font-size: .6em;
+                font-size: .8em;
             }
         }
     }
@@ -612,6 +612,43 @@ a {
                         top: 50%;
                         }
                     }
+                }
+            }
+        }
+    }
+}
+
+/* 更新情報・お知らせ */
+.setting4 {
+    .introduction {
+        background: $beigeColor;
+        min-height: 0;
+
+        @include mq_pc() {
+            min-height: 600px;
+        }
+
+        h3 {
+            margin: 0 15px;
+            padding: 30px 0 20px 0;
+            border-bottom: 1px #868585 solid;
+            font-family: $fontMincho;
+            color: #a0122c;
+        }
+
+        .info-list {
+            .info-list__item {
+                position: relative;
+                margin: 30px;
+                list-style: none;
+
+                time::before {
+                    content: "●";
+                    position: absolute;
+                    top: .5em;
+                    margin: 0 0 0 -12px;
+                    font-size: .5em;
+                    color: #a0122c;
                 }
             }
         }
