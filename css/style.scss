@@ -620,23 +620,45 @@ a {
 
 /* 更新情報・お知らせ */
 .setting4 {
+    .main {
+        background: $beigeColor;
+    }
+
     .introduction {
+        display: flex;
+        flex-direction: column;
         background: $beigeColor;
         min-height: 0;
 
         @include mq_pc() {
             min-height: 600px;
+            flex-direction: row;
+            flex-wrap: wrap;
         }
 
         h3 {
             margin: 0 15px;
             padding: 30px 0 20px 0;
-            border-bottom: 1px #868585 solid;
+            border-bottom: 1px solid #868585;
             font-family: $fontMincho;
             color: #a0122c;
+
+            @include mq_pc() {
+                border-right: 2px solid #868585;
+                border-bottom: 0;
+                padding-right: 90px;
+                margin-top: 40px;
+                padding-top: 0;
+            }
         }
 
         .info-list {
+            @include mq_pc() {
+                width: 600px;
+                padding-top: 15px;
+                padding-left: 10px;
+            }
+
             .info-list__item {
                 position: relative;
                 margin: 30px;
@@ -645,7 +667,7 @@ a {
                 time::before {
                     content: "●";
                     position: absolute;
-                    top: .5em;
+                    top: .4em;
                     margin: 0 0 0 -12px;
                     font-size: .5em;
                     color: #a0122c;
