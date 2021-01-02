@@ -676,3 +676,37 @@ a {
         }
     }
 }
+
+/* 花の検索 */
+.temporaryImage {
+    background: $beigeColor;
+    margin: 57px auto 0 auto;
+    padding-top: 20px;
+    text-align: center;
+
+    .attention {
+        display: block;
+        padding-bottom: 15px;
+    }
+
+    //スマホ用、画像表示
+    .sp {
+        display: block !important;
+        margin: 0 auto;
+    }
+    .pc {
+        display: none !important;
+    }
+
+    @include mq_pc() {
+        //PC用、画像表示
+        .sp {
+            display: none !important;
+        }
+        .pc {
+            display: block !important;
+        }
+
+        max-width: $pcMaxWidth;
+    }
+}

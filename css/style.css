@@ -715,4 +715,38 @@ a:hover {
   font-size: .5em;
   color: #a0122c;
 }
+
+/* 花の検索 */
+.temporaryImage {
+  background: #ece4e1;
+  margin: 57px auto 0 auto;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.temporaryImage .attention {
+  display: block;
+  padding-bottom: 15px;
+}
+
+.temporaryImage .sp {
+  display: block !important;
+  margin: 0 auto;
+}
+
+.temporaryImage .pc {
+  display: none !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .temporaryImage {
+    max-width: 960px;
+  }
+  .temporaryImage .sp {
+    display: none !important;
+  }
+  .temporaryImage .pc {
+    display: block !important;
+  }
+}
 /*# sourceMappingURL=style.css.map */
