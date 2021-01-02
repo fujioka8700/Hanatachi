@@ -2,9 +2,9 @@
 
 //ハンバーガーメニュー
 function toggleNav() {
-    var body = document.body;
-    var hamburger = document.getElementById('js-hamburger');
-    var blackBg = document.getElementById('js-black-bg');
+    const body = document.body;
+    const hamburger = document.getElementById('js-hamburger');
+    const blackBg = document.getElementById('js-black-bg');
 
     hamburger.addEventListener('click', function () {
         body.classList.toggle('nav-open');
@@ -17,8 +17,8 @@ toggleNav();
 
 //「メニューを閉じる」押すと、ナビメニュー閉じる
 function navClose() {
-    let body = document.body;
-    let navClose = document.getElementById('nav-close');
+    const body = document.body;
+    const navClose = document.getElementById('nav-close');
 
     navClose.addEventListener('click', function(){
         body.classList.remove('nav-open');
