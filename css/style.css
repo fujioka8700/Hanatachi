@@ -294,6 +294,10 @@ a:hover {
 }
 
 /* ----- TOP画面のリンクへのボタン ----- */
+.sp__top-button {
+  list-style: none;
+}
+
 .sp__top-button .inside__image {
   position: relative;
   text-align: center;

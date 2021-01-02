@@ -309,6 +309,8 @@ a {
 
 /* ----- TOP画面のリンクへのボタン ----- */
 .sp__top-button {
+    list-style: none;
+
     .inside__image {
         position: relative;
         text-align: center;
